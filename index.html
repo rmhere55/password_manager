@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal password manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css
+">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,700;1,300&family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans', sans-serif;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            background-color: black;
+            color: white;
+            padding: 12px 3px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo {
+            margin: 0 23px;
+            font-weight: 800;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        ul {
+            display: flex;
+            margin: 0 23px;
+            align-items: center;
+        }
+
+        ul>li {
+            list-style: none;
+            margin: 0 13px;
+            cursor: pointer;
+        }
+
+        ul>li:hover {
+            color: white;
+
+        }
+
+        table,
+        td,
+        tr {
+            border: 2px solid black;
+            border-collapse: collapse;
+            padding: 5px 13px;
+        }
+
+        .container {
+            max-width: 80vw;
+            margin: 23px auto;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 23px 0;
+        }
+
+        .btn {
+            padding: 8px 17px;
+            background: black;
+            color: white;
+            font-weight: 900;
+            border: 2px solid gray;
+            border-radius: 8px;
+            margin: 25px 0;
+            cursor: pointer;
+        }
+
+        .btnsm {
+            padding: 8px 17px;
+            background: black;
+            color: white;
+            font-weight: 900;
+            border: 2px solid gray;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        img {
+            cursor: pointer;
+            position: relative;
+            bottom: 7px;
+            width: 15px;
+            height: 13px;
+        }
+
+        #alert {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">PasswordSaver</div>
+
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>
+                Contact
+            </li>
+        </ul>
+
+    </nav>
+    <div class="container-fluied">
+        <h1>Password Manager</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus voluptatem, eos exercitationem id illum
+            animi dolorem consectetur nulla aut odit!</p>
+        <h2>Your Password</h2>
+        <table> <!-- Noncompliant -->
+            <tr>
+                <th>Website</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Delete</th>
+            </tr>
+
+
+
+        </table>
+
+        <h2>Add a Password</h2>
+        <form action="/submit" method="post">
+
+
+
+            <!-- Text input for Website-->
+
+            <label type="text">Website:</label>
+
+
+
+
+            <input type="text" name="website">
+            <br><br>
+
+
+            <!-- Text input for username -->
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br><br>
+
+            <!-- Password input -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br><br>
+
+            <!-- Submit button -->
+            <button class="btn" type="submit" value="Submit"> Submit</button>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
